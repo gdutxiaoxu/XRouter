@@ -1,0 +1,20 @@
+apply plugin: 'java-library'
+apply plugin: 'com.novoda.bintray-release'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly 'com.google.android:android:4.1.1.4'
+    compileOnly project(path: ':stub')
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"
+
+publish {
+    userOrg = 'xujun94'
+    groupId = 'com.xj.xrouter'
+    artifactId = 'router-api'
+    publishVersion = '0.0.01'
+    desc = 'router-api'
+    website = 'https://github.com/gdutxiaoxu/xrouter'
+}

@@ -1,0 +1,20 @@
+apply plugin: 'java-library'
+apply plugin: 'com.novoda.bintray-release'
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly 'com.google.android:android:4.1.1.4'
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
+
+apply from: 'binary.gradle'
+
+publish {
+    userOrg = 'xujun94'
+    groupId = 'com.xj.xrouter'
+    artifactId = 'router-annotion'
+    publishVersion = '0.0.01'
+    desc = 'router-annotion'
+    website = 'https://github.com/gdutxiaoxu/xrouter'
+}

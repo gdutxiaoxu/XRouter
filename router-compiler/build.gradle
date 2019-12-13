@@ -1,0 +1,26 @@
+apply plugin: 'java'
+apply plugin: 'com.novoda.bintray-release'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':router-annotation')
+    // 生成java文件
+    implementation 'com.squareup:javapoet:1.8.0'
+    // 生成META-INFO
+    implementation 'com.google.auto.service:auto-service:1.0-rc3'
+//    compileOnly project(path: ':stub')
+
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+
+publish {
+    userOrg = 'xujun94'
+    groupId = 'com.xj.xrouter'
+    artifactId = 'router-compiler'
+    publishVersion = '0.0.01'
+    desc = 'router-compiler'
+    website = 'https://github.com/gdutxiaoxu/xrouter'
+}

@@ -1,0 +1,2 @@
+include ':app', ':router-annotation', ':router-compiler', ':mylibrary', ':stub', ':router-api'
+rootProject.name='XRouter'
